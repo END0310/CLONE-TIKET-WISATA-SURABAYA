@@ -1,0 +1,3 @@
+<?= view('layout/header', ['title' => $title, 'profile' => $profile, 'menus' => $menus]) ?>
+<section class="py-5"><div class="container"><div class="content-card text-center py-5"><i class="bi bi-x-circle-fill text-danger display-1"></i><h1 class="fw-bold mt-3">Pembayaran Gagal</h1><p class="text-muted">Silakan ulangi pembayaran untuk booking <?= esc($bookingCode) ?>.</p><a class="btn btn-primary rounded-pill px-4" href="<?= base_url('/payment/' . $bookingCode) ?>">Coba Lagi</a></div></div></section>
+<?= view('layout/footer', ['profile' => $profile, 'footerLinks' => $footerLinks, 'socialMedia' => $socialMedia, 'contactInfos' => $contactInfos]) ?>

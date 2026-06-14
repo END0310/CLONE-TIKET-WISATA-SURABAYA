@@ -1,0 +1,3 @@
+<?= view('admin/layout/header', ['title' => $title]) ?>
+<div class="card admin-card"><div class="card-body table-responsive"><table class="table align-middle"><thead><tr><th>Nama</th><th>Email</th><th>No HP</th><th>Subjek</th><th>Pesan</th><th>Status</th></tr></thead><tbody><?php foreach ($messages as $row): ?><tr><td><?= esc($row['name']) ?></td><td><?= esc($row['email']) ?></td><td><?= esc($row['phone']) ?></td><td><?= esc($row['subject']) ?></td><td><?= esc($row['message']) ?></td><td><span class="badge bg-secondary"><?= esc($row['status']) ?></span></td></tr><?php endforeach; ?></tbody></table></div></div>
+<?= view('admin/layout/footer') ?>

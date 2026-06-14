@@ -1,0 +1,3 @@
+<?= view('admin/layout/header', ['title' => $title]) ?>
+<div class="card admin-card"><div class="card-body table-responsive"><table class="table align-middle"><thead><tr><th>Kode Tiket</th><th>Booking</th><th>Nama</th><th>Status</th><th>Issued</th><th>Used</th></tr></thead><tbody><?php foreach ($tickets as $row): ?><tr><td><?= esc($row['ticket_code']) ?></td><td><?= esc($row['booking_code']) ?></td><td><?= esc($row['visitor_name']) ?></td><td><span class="badge bg-primary"><?= esc($row['ticket_status']) ?></span></td><td><?= esc($row['issued_at']) ?></td><td><?= esc($row['used_at'] ?? '-') ?></td></tr><?php endforeach; ?></tbody></table></div></div>
+<?= view('admin/layout/footer') ?>
